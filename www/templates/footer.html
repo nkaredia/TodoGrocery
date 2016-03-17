@@ -1,0 +1,10 @@
+<ion-footer-bar class="bar-positive footer-custom">
+    <div class="button-bar">
+        <button ng-hide="data == null || data.length == 0" ripple ng-click="deleteAllItems($event)" class="icon ion-ios-trash-outline button button-block close-button">
+            Delete All
+        </button>
+        <button ripple ng-click="addItem($event)" class="icon ion-ios-plus-empty button button-block plus-button add-button">
+            Add
+        </button>
+    </div>
+</ion-footer-bar>

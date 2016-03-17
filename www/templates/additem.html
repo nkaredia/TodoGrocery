@@ -1,0 +1,28 @@
+<ion-view>
+    <ion-content>
+        <div class="content-container padding" ng-controller="AddCtrl">
+            <div class="list" style="margin-top: 50px;">
+                <div class="item item-divider card-item-divider-custom">
+                    Add Item
+                </div>
+                <label class="item item-input">
+                    <input type="text" name="name" placeholder="Name" id="name-input">
+                </label>
+                <label class="item item-input">
+                    <input type="number" name="quantity" min="0" placeholder="Quantity" id="quantity-input">
+                </label>
+                <label class="item item-input item-select select-custom">
+                    <select id="unit-input">
+                        <option selected value="pk">pk Pack</option>
+                        <option value="lt">lt Litre</option>
+                        <option value="dz">dz Dozen</option>
+                        <option value="kg">kg Kilo</option>
+                        <option value="lb">lb Pound</option>
+                        <option value="gl">gl Gallon</option>
+                    </select>
+                </label>
+            </div>
+            <button ripple ng-click="addNewItem($event)" class="button button-block button-positive">Add</button>
+        </div>
+    </ion-content>
+</ion-view>

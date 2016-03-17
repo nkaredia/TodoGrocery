@@ -1,0 +1,38 @@
+<ion-view>
+    <div ng-include="'templates/subheader.html'"></div>
+    <ion-content class="has-subheader">
+        <p class="padding add-new" ng-show="!data || data.length == 0">
+            <span class="add-new-sub-container">
+                <span>Press "</span>
+                <span class="icon ion-ios-plus-empty"></span>
+                <span> " to add new Item</span>
+            </span>
+        </p>
+        <ion-list ng-show="data || data.length > 0" can-swipe="true">
+            <ion-item class="custom-ion-item item item-checkbox item-remove-animate" ng-repeat="item in data" ng-click="checkItem($index,$event)">
+
+                <div class="item-flex-container">
+                    <div class="flex-item flex-header-container item-check-name-flex">
+                        <div class="check-flex flex-inner">
+                            <ion-checkbox class="checkbox-positive" ng-click="checkItem($index,$event)" ng-checked="item.checked"></ion-checkbox>
+                        </div>
+                        <div class="name-flex flex-inner" ng-class="{scratch1:item.checked}">
+                            <span>{{item.name}}</span>
+                        </div>
+                    </div>
+                    <div class="flex-item sort-flex sort-flex-none" >
+                    </div>
+                    <div class="flex-item quantity-flex item-quantity-flex" ng-class="{scratch2:item.checked}">
+                        <span>{{item.quantity}}</span>
+                        <span>{{item.unit}}</span>
+                    </div>
+                </div>
+
+                <ion-option-button ripple ng-click="deleteItem($index)" class="button-info button-assertive">
+                    Delete
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <div ng-include="'templates/footer.html'"></div>
+</ion-view>

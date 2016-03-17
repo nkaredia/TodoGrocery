@@ -1,0 +1,53 @@
+<ion-view>
+    <ion-content ng-controller="AboutCtrl">
+        <div class="content-container padding">
+            <div class="list">
+                <div class="item app-item">
+                    <div class="app-item-container">
+                        <div class="app-image">
+                            <img src="img/icon.png" width="96" height="96" alt="">
+                        </div>
+                        <div class="app-info">
+                            <div class="app-info-name">
+                                Todo Grocery
+                            </div>
+                            <div class="app-info-desc">
+                                Todo Grocery List app to perform simple grocery task with easy navigations.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+                <div class="item app-share">
+                    <a ng-click="rateAndReview($event)">Rate and Review</a>
+                </div>
+                <div class="item app-share">
+                    <a ng-click="gotoFeedback($event)">Feedback</a>
+                </div>
+                <div class="item app-share">
+                    <a ng-click="share($event)">Share</a>
+                </div>
+            </div>
+            <div class="list">
+                <div class="item item-divider">
+                    Author
+                </div>
+                <div class="item">
+                    <span class="author-name">Noorsil Karedia</span> </br> 
+                    <span class="author-web-link"> 
+                        <a onclick="window.open('http://www.karedianoorsil.com', '_system', 'location=yes'); return false;">www.karedianoorsil.com</a>
+                    </span>
+                </div>
+            </div>
+            <div class="list">
+                <div class="item item-divider">
+                    Help
+                </div>
+                <div class="item about-help-item">
+                    Please click <a ng-click="gotoHelp($event)">here</a> to know about features and functions of this app
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

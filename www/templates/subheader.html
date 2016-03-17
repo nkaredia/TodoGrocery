@@ -1,0 +1,20 @@
+    <div class="bar bar-subheader app-subheader" ng-hide="data == null || data.length == 0">
+        <div class="flex-header-container">
+            <div class="flex-item flex-header-container check-name-flex">
+                <div class="check-flex flex-inner">
+                    <ion-checkbox ng-checked="selectAll" ng-click="selectAllItems($event)" class="checkbox-positive"></ion-checkbox>
+                </div>
+                <div class="name-flex name-header-flex flex-inner">
+                    <span ng-click="sortItems('name')">Name</span>
+                </div>
+            </div>
+            <div class="flex-item sort-flex">
+                <button ng-click="sortItems('checked')" class="button button-clear button-dark">
+                    <span class="icon ion-android-funnel"></span>
+                </button>
+            </div>
+            <div class="flex-item quantity-header-flex quantity-flex">
+                <span ng-click="sortItems('quantity')">Quantity</span>
+            </div>
+        </div>
+    </div>

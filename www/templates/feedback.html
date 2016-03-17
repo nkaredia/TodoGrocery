@@ -1,0 +1,31 @@
+<ion-view>
+    <ion-content ng-controller="FeedbackCtrl">
+        <div class="content-container padding">
+            <div class="feedback-header">
+                Feedback
+            </div>
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Name</span>
+                    <input id="feedbackName" ng-model="name" type="text" placeholder="Name*" ng-required>
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Details</span>
+                    <textarea id="feedbackDetails" ng-model="details" rows="" cols="" placeholder="Details*" ng-required></textarea>
+                </label>
+            </div>
+            <div class="feedbackError">
+                {{name ? "" : "Name"}} {{name != "" || details != "" ? "" : "and"}} {{details != ""? "" : "Details"}} {{name != "" || details != "" ? "" : "are"}} {{name != "" && details != "" ? "" : "required"}}
+            </div>
+            <div class="feedback-button-div">
+                <button ng-click="postFeedback($event)" class="button button-block button-positive feedback-button" ripple>Post Feedback</button>
+            </div>
+            <div class="feedbackError">
+                {{!online ? "No Internet Connection" : ""}}
+            </div>
+            <div class="feedback-reply">
+                {{feedback ?  "Thanks for your feedback" : ""}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
